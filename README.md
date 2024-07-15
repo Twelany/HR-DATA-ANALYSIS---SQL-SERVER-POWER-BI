@@ -74,9 +74,39 @@ The termdate was imported as nvarchar(50). This column contains termination date
 
 Update termdate date/time to date
 
-- i.convert dates to yyyy-MM-dd
-- ii.create new column new_termdate
-- iii.copy converted time values from termdate to new_termdate
+- Convert dates to yyyy-MM-dd
+- Create new column new_termdate
+- Copy converted time values from termdate to new_termdate
   
-- convert dates to yyyy-MM-dd
+- Convert dates to yyyy-MM-dd
+  
+<pre>UPDATE hr_data
+SET termdate = FORMAT(CONVERT(DATETIME, LEFT(termdate, 19), 120), 'yyyy-MM-dd');</pre>
+
+- create new column new_termdate
+  
+<pre>ALTER TABLE hr_data
+ADD new_termdate DATE;</pre>
+
+- copy converted time values from termdate to new_termdate
+  
+<pre>UPDATE hr_data
+SET new_termdate = CASE
+ WHEN termdate IS NOT NULL AND ISDATE(termdate) = 1 THEN CAST(termdate AS DATETIME) ELSE NULL
+ END;</pre>
+
+- check results
+  
+<pre>SELECT new_termdate
+FROM hr_data;</pre>
+
+- create new column "age"
+  
+<pre>ALTER TABLE hr_data
+ADD age nvarchar(50)</pre>
+
+- populate new column with age
+  
+<pre>UPDATE hr_data
+SET age = DATEDIFF(YEAR, birthdate, GETDATE());</pre>
 
