@@ -77,7 +77,7 @@ Update termdate date/time to date
 - Convert dates to yyyy-MM-dd
 - Create new column new_termdate
 - Copy converted time values from termdate to new_termdate
-  
+  <br>
 - Convert dates to yyyy-MM-dd
   
 <pre>UPDATE hr_data
@@ -110,3 +110,51 @@ ADD age nvarchar(50)</pre>
 <pre>UPDATE hr_data
 SET age = DATEDIFF(YEAR, birthdate, GETDATE());</pre>
 
+# QUESTIONS TO ANSWER FROM THE DATA
+
+<h3>1) What's the age distribution in the company?</h3>
+
+- age distribution
+  
+SELECT
+ MIN(age) AS youngest,
+ MAX(age) AS OLDEST
+FROM hr_data;
+
+- age group count
+  
+<pre>SELECT age_group,
+count(*) AS count
+FROM
+(SELECT 
+ CASE
+  WHEN age <= 21 AND age <= 30 THEN '21 to 30'
+  WHEN age <= 31 AND age <= 40 THEN '31 to 40'
+  WHEN age <= 41 AND age <= 50 THEN '41 to 50'
+  ELSE '50+'
+  END AS age_group
+ FROM hr_data
+ WHERE new_termdate IS NULL
+ ) AS subquery
+GROUP BY age_group
+ORDER BY age_group;</pre>
+                     
+- Age group by gender
+  
+<pre>SELECT age_group,
+gender,
+count(*) AS count
+FROM
+(SELECT 
+ CASE
+  WHEN age <= 21 AND age <= 30 THEN '21 to 30'
+  WHEN age <= 31 AND age <= 40 THEN '31 to 40'
+  WHEN age <= 41 AND age <= 50 THEN '41 to 50'
+  ELSE '50+'
+  END AS age_group,
+  gender
+ FROM hr_data
+ WHERE new_termdate IS NULL
+ ) AS subquery
+GROUP BY age_group, gender
+ORDER BY age_group, gender;</pre>
