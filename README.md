@@ -21,7 +21,7 @@ This was done on SQL server 2022 involving
 ![image](https://github.com/user-attachments/assets/51f8b13f-9f71-4bee-a183-0d6e9df9509c)
 
 # Exploratory Data Analysis
-#Questions:
+<h3>Questions:</h3>
 
 - What's the age distribution in the company?
 - What's the gender breakdown in the company?
@@ -64,4 +64,19 @@ This was done on SQL server 2022 involving
 
 <pre>SELECT *
 FROM hr_data;</pre>
+
+<h3>3) DATA CLEANING</h3>
+The termdate was imported as nvarchar(50). This column contains termination dates, hence it needs to be converted to the date format.
+
+<h5>Update date/time to date</h5>
+
+![image](https://github.com/user-attachments/assets/f5a01e0b-6208-4d6d-ab04-90386c35f24c)
+
+Update termdate date/time to date
+
+- i.convert dates to yyyy-MM-dd
+- ii.create new column new_termdate
+- iii.copy converted time values from termdate to new_termdate
+  
+- convert dates to yyyy-MM-dd
 
