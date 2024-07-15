@@ -35,7 +35,7 @@ This was done on SQL server 2022 involving
 - How are job titles distributed in the company?
 - How have employee hire counts varied over time?
 
-<h3> Findings<h3> 
+<h3> Findings</h3> 
 
 - There are more male employees than female or non-conforming employees.
 - The genders are fairly evenly distributed across departments. There are slightly more male employees overall.
@@ -50,11 +50,11 @@ This was done on SQL server 2022 involving
 - Employee hire counts have increased over the years.
 
 
-<h3>1) Create Database<h3>
+<h3>1) Create Database</h3>
 
 <pre>CREATE DATABASE hr;</pre>
 
-<h3>2) Import Data to SQL Server<h3>
+<h3>2) Import Data to SQL Server</h3>
   
 - Right-click on Human_Resources > Tasks > Import Data
 - Verify that the import worked:
