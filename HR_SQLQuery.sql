@@ -1,14 +1,14 @@
 /*
 This project dives deep into the realm of data analysis using SQL and Power BI to uncover important human resource insights that can greatly benefit the company.
 Date: Nov. 28 2023
-Author: Simon Macharia
-Get more projects at: https://www.hisdataproject.com/
+Author: Twelane Mudaka
+Get more projects at: http://datascienceportfol.io/Twelanymudaka
 */
 
 -- create database
 CREATE DATABASE hr
 
--- after loading DB (watch how at https://www.youtube.com/watch?v=4yn7iUJnJtE) force SQL to use new db from this point on
+-- force SQL to use new db from this point on
 use hr
 
 -- explore the loaded data into hr_data
