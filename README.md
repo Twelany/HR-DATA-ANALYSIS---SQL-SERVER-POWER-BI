@@ -119,7 +119,7 @@ SET age = DATEDIFF(YEAR, birthdate, GETDATE());</pre>
 <pre>SELECT
  MIN(age) AS youngest,
  MAX(age) AS OLDEST
-FROM hr_data;<pre>
+FROM hr_data;</pre>
 
 - age group count
   
