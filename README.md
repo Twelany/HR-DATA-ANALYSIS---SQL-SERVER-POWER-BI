@@ -52,7 +52,7 @@ This was done on SQL server 2022 involving
 
 <h3>1) Create Database<h3>
 
-<pre>CREATE DATABASE hr;<pre>
+<pre>CREATE DATABASE hr;</pre>
 
 <h3>2) Import Data to SQL Server<h3>
   
