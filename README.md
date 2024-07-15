@@ -50,15 +50,15 @@ This was done on SQL server 2022 involving
 - Employee hire counts have increased over the years.
 
 
-#1) Create Database
+# 1) Create Database
 
 CREATE DATABASE hr;
 
-#2) Import Data to SQL Server
-- ight-click on Human_Resources > Tasks > Import Data
+# 2) Import Data to SQL Server
+- Right-click on Human_Resources > Tasks > Import Data
 - Verify that the import worked:
 
-use hr;
+<pre>use hr;</pre>
 
 SELECT *
 FROM hr_data;
