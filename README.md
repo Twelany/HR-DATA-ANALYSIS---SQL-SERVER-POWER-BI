@@ -52,12 +52,14 @@ This was done on SQL server 2022 involving
 
 <h3>1) Create Database<h3>
 
-CREATE DATABASE hr;
+<pre>CREATE DATABASE hr;<pre>
 
 <h3>2) Import Data to SQL Server<h3>
+  
 - Right-click on Human_Resources > Tasks > Import Data
 - Verify that the import worked:
 
+  
 <pre>use hr;</pre>
 
 <pre>SELECT *
