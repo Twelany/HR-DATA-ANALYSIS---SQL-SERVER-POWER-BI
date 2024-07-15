@@ -60,6 +60,6 @@ CREATE DATABASE hr;
 
 <pre>use hr;</pre>
 
-SELECT *
-FROM hr_data;
+<pre>SELECT *
+FROM hr_data;</pre>
 
