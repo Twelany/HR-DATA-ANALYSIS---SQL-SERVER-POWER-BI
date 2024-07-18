@@ -21,7 +21,7 @@ This was done on SQL server 2022 involving
 ![image](https://github.com/user-attachments/assets/51f8b13f-9f71-4bee-a183-0d6e9df9509c)
 
 # Exploratory Data Analysis
-<h3>Questions:</h3>
+<h3>Problem Statements:</h3>
 
 - What's the age distribution in the company?
 - What's the gender breakdown in the company?
